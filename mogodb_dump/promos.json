@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "642f44444bd6c6ec58433167"
+  },
+  "name": "PROMO10",
+  "reduction": 10,
+  "startDate": {
+    "$date": "2023-04-01T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2023-04-30T23:59:59.000Z"
+  },
+  "productId": {
+    "$oid": "6423625eb87b3eab3a6c1e3b"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642f44674bd6c6ec58433169"
+  },
+  "name": "PROMO35",
+  "reduction": 35,
+  "startDate": {
+    "$date": "2023-04-01T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2023-05-30T23:59:59.000Z"
+  },
+  "productId": {
+    "$oid": "6423625eb87b3eab3a6c1e3d"
+  },
+  "__v": 0
+}]

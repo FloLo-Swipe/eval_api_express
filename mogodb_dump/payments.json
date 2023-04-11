@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "642f44ab4bd6c6ec5843316b"
+  },
+  "user_id": {
+    "$oid": "6429cea79d313f4681ad24a8"
+  },
+  "order_id": {
+    "$oid": "6429f1d1eb539daca8596e5b"
+  },
+  "amount": 959.97,
+  "paymentDate": {
+    "$date": "2023-04-06T22:09:25.451Z"
+  },
+  "__v": 0
+}]

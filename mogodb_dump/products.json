@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "6423625eb87b3eab3a6c1e3a"
+  },
+  "id": 2,
+  "name": "Ordinateur de bureau Dell OptiPlex 3080",
+  "stock": 5,
+  "category": "Ordinateurs de bureau",
+  "marque": "Dell",
+  "price": 899.99
+},{
+  "_id": {
+    "$oid": "6423625eb87b3eab3a6c1e3b"
+  },
+  "id": 3,
+  "name": "Imprimante HP LaserJet Pro MFP M428fdw",
+  "stock": 20,
+  "category": "Imprimantes",
+  "marque": "HP",
+  "price": 349.99
+},{
+  "_id": {
+    "$oid": "6423625eb87b3eab3a6c1e3c"
+  },
+  "id": 4,
+  "name": "Disque dur externe Seagate Expansion",
+  "stock": 15,
+  "category": "Stockage",
+  "marque": "Seagate",
+  "price": 79.99
+},{
+  "_id": {
+    "$oid": "6423625eb87b3eab3a6c1e3d"
+  },
+  "id": 5,
+  "name": "Carte graphique NVIDIA GeForce RTX 3080",
+  "stock": 3,
+  "category": "Composants",
+  "marque": "NVIDIA",
+  "price": 799.99
+},{
+  "_id": {
+    "$oid": "6429968bf8dcee4dd1439392"
+  },
+  "id": 6,
+  "name": "Ordinateur portable Lenovo legion 5",
+  "stock": 3,
+  "category": "Ordinateurs portables",
+  "marque": "Lenovo",
+  "price": 1450
+}]

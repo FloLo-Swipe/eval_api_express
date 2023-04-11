@@ -1,0 +1,258 @@
+@host=http://localhost:3000
+
+terminal : node server.js
+
+ubunto : redis-server
+
+.env :
+PORT=3000
+MONGO_URL=mongodb://localhost:27017/evalExpress
+SECRET=1234
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#################
+##User###########
+#################
+
+### Signin
+POST localhost:3000/signin
+Content-Type: application/json
+
+{
+    "email": "florian.leborgne@ynov.com",
+    "password": "123456789"
+}
+
+### Login 
+POST localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "florian.leborgne@ynov.com",
+    "password": "123456789"
+}
+
+### signout 
+GET localhost:3000/signout
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#################
+##Product########
+#################
+
+### add one Product 
+POST localhost:3000/product 
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{
+  "id": 1,
+  "name": "Ordinateur portable Lenovo ThinkPad X1 Carbon",
+  "stock": 10,
+  "category": "Ordinateurs portables",
+  "marque": "Lenovo",
+  "price": 1299.99
+}
+
+### get all products 
+GET localhost:3000/product
+
+### update product 
+PUT localhost:3000/product/6429b050d537a8a1f0c49c8f
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{
+  "id": 1,
+  "name": "Ordinateur portable Alienware X1",
+  "stock": 10,
+  "category": "Ordinateurs portables",
+  "marque": "Alienware",
+  "price": 1789.99
+}
+
+### delete article 
+DELETE localhost:3000/product/6429b050d537a8a1f0c49c8f
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+
+### get product by category 
+GET localhost:3000/product/Imprimantes
+
+### search product
+GET localhost:3000/searchproduct/search?query=ordinateur
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#################
+##Comments#######
+#################
+
+### Add comment 
+POST localhost:3000/comment/6423625eb87b3eab3a6c1e3a
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{ 
+  "id": 1,
+  "content": "C'est très cher pour un PC Portable !"
+}
+
+### get all comment of product
+GET localhost:3000/comment
+
+### get comment of product id
+GET localhost:3000/comment/6429baab2fb3403cd388b589
+
+### update comment 
+PUT localhost:3000/comment/6429baab2fb3403cd388b589
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{ 
+  "id": 1,
+  "content": "Ce n'est pas cher pour un PC Portable !"
+}
+
+### delete comment 
+DELETE localhost:3000/comment/6429baab2fb3403cd388b589
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#################
+##Order##########
+#################
+
+### Add order 
+POST localhost:3000/order
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{
+  "user_id": "6429cea79d313f4681ad24a8", 
+  "productList": [
+    {
+      "product_id": "6423625eb87b3eab3a6c1e3a", 
+      "quantity": 2 
+    },
+    {
+      "product_id": "6423625eb87b3eab3a6c1e3b",
+      "quantity": 1
+    }
+  ]
+}
+
+### get all orders
+GET localhost:3000/order
+
+### get order by id
+GET localhost:3000/order/6429e782b3be2e57a810d263
+
+### update order 
+PUT localhost:3000/order/6429e782b3be2e57a810d263
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{
+  "user_id": "6429cea79d313f4681ad24a8", 
+  "productList": [
+    {
+      "product_id": "6423625eb87b3eab3a6c1e3d", 
+      "quantity": 6 
+    }
+    ]
+}
+
+### delete comment 
+DELETE localhost:3000/order/6429e782b3be2e57a810d263
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#################
+##Promo##########
+#################
+
+### Add promo 
+POST localhost:3000/promo
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{
+  "name": "PROMO10",
+  "reduction": 10,
+  "startDate": "2023-04-01T00:00:00.000Z",
+  "endDate": "2023-04-30T23:59:59.000Z",
+  "productId":"6423625eb87b3eab3a6c1e3b"
+}
+
+### get all promos
+GET localhost:3000/promo
+
+### get promo by id
+GET localhost:3000/promo/6429ef240f6f44b3a1a6465c
+
+### update promo 
+PUT localhost:3000/promo/6429ef240f6f44b3a1a6465c
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{
+  "name": "PROMO35",
+  "reduction": 35,
+  "startDate": "2023-04-01T00:00:00.000Z",
+  "endDate": "2023-05-30T23:59:59.000Z",
+  "productId":"6423625eb87b3eab3a6c1e3b"
+}
+
+
+### delete promo 
+DELETE localhost:3000/promo/6429ef240f6f44b3a1a6465c
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#################
+##Payment########
+#################
+
+### Add Payment 
+POST localhost:3000/payment
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{
+  "user_id": "6429cea79d313f4681ad24a8",
+  "order_id": "6429f1d1eb539daca8596e5b",
+  "amount": 959.97,
+  "payment_date": "2023-03-31"
+}
+
+### get all payments
+GET localhost:3000/payment
+
+### get payment by id
+GET localhost:3000/payment/6429f22aeb539daca8596e5f
+
+### update payment 
+PUT localhost:3000/payment/6429f22aeb539daca8596e5f
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+{
+  "user_id": "6429cea79d313f4681ad24a8",
+  "order_id": "6429f1d1eb539daca8596e5b",
+  "amount": 909.97,
+  "payment_date": "2023-04-21"
+}
+
+### delete payment 
+DELETE localhost:3000/payment/6429f22aeb539daca8596e5f
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8
+
+

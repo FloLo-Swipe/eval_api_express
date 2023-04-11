@@ -1,0 +1,9 @@
+Instruction lancement projet Eval express NoSql
+
+- crée une nouvelle base de donnée mongodb :
+	- créé chaque collection (products, users, payments, orders, comments, promos) et importer les données pour chaque fichier JSON dans le dossier "mogodb_dump"		
+- lancer la base redis en faisant "redis-server" sur un terminal
+- lancer le projet avec la commande "node server.js" dans un terminal
+- Copié le fichier "Eval NOSQL.postman_collection" puis aller sur postman, dans "collection", puis "import" et collé tout le fichier pour récupérer toutes routes (detailRouteNOSQL est un txt qui explique les routes aussi)
+
+ 

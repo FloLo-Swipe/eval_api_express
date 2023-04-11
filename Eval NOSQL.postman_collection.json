@@ -1,0 +1,823 @@
+{
+	"info": {
+		"_postman_id": "576aaac0-af1f-4896-ab7e-3a6c04170745",
+		"name": "Eval NOSQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24774974"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "localhost:3000/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"florian.leborgne@ynov.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"florian.leborgne@ynov.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/signout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/signout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"signout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "http://localhost:3000/product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Ordinateur portable Lenovo ThinkPad X1 Carbon\",\r\n  \"stock\": 10,\r\n  \"category\": \"Ordinateurs portables\",\r\n  \"marque\": \"Lenovo\",\r\n  \"price\": 1299.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/product/6429b050d537a8a1f0c49c8f",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Ordinateur portable Alienware X1\",\r\n  \"stock\": 10,\r\n  \"category\": \"Ordinateurs portables\",\r\n  \"marque\": \"Alienware\",\r\n  \"price\": 1789.99\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/product/6429b050d537a8a1f0c49c8f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6429b050d537a8a1f0c49c8f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/product/6429b050d537a8a1f0c49c8f",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/product/6429b050d537a8a1f0c49c8f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6429b050d537a8a1f0c49c8f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/product/Imprimantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/Imprimantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"Imprimantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/searchproduct/search?query=ordinateur",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/searchproduct/search?query=ordinateur",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"searchproduct",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "ordinateur"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "http://localhost:3000/comment/6423625eb87b3eab3a6c1e3a",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"id\": 1,\r\n  \"content\": \"C'est très cher pour un PC Portable !\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/comment/6423625eb87b3eab3a6c1e3a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comment",
+								"6423625eb87b3eab3a6c1e3a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/comment/6429baab2fb3403cd388b589",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/comment/6429baab2fb3403cd388b589",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comment",
+								"6429baab2fb3403cd388b589"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/comment/6429baab2fb3403cd388b589",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"id\": 1,\r\n  \"content\": \"Ce n'est pas cher pour un PC Portable !\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/comment/6429baab2fb3403cd388b589",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comment",
+								"6429baab2fb3403cd388b589"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/comment/6429baab2fb3403cd388b589",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/comment/6429baab2fb3403cd388b589",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"comment",
+								"6429baab2fb3403cd388b589"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "http://localhost:3000/order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"6429cea79d313f4681ad24a8\", \r\n  \"productList\": [\r\n    {\r\n      \"product_id\": \"6423625eb87b3eab3a6c1e3a\", \r\n      \"quantity\": 2 \r\n    },\r\n    {\r\n      \"product_id\": \"6423625eb87b3eab3a6c1e3b\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/order/6429e782b3be2e57a810d263",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/order/6429e782b3be2e57a810d263",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"6429e782b3be2e57a810d263"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/order/6429e782b3be2e57a810d263",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"6429cea79d313f4681ad24a8\", \r\n  \"productList\": [\r\n    {\r\n      \"product_id\": \"6423625eb87b3eab3a6c1e3d\", \r\n      \"quantity\": 6 \r\n    }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/6429e782b3be2e57a810d263",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"6429e782b3be2e57a810d263"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/order/6429e782b3be2e57a810d263",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/order/6429e782b3be2e57a810d263",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"6429e782b3be2e57a810d263"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Promo",
+			"item": [
+				{
+					"name": "http://localhost:3000/promo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"PROMO10\",\r\n  \"reduction\": 10,\r\n  \"startDate\": \"2023-04-01T00:00:00.000Z\",\r\n  \"endDate\": \"2023-04-30T23:59:59.000Z\",\r\n  \"productId\":\"6423625eb87b3eab3a6c1e3b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/promo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"promo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/promo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/promo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"promo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/promo/6429ef240f6f44b3a1a6465c",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/promo/6429ef240f6f44b3a1a6465c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"promo",
+								"6429ef240f6f44b3a1a6465c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/promo/6429ef240f6f44b3a1a6465c?Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0t",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"PROMO35\",\r\n  \"reduction\": 35,\r\n  \"startDate\": \"2023-04-01T00:00:00.000Z\",\r\n  \"endDate\": \"2023-05-30T23:59:59.000Z\",\r\n  \"productId\":\"6423625eb87b3eab3a6c1e3b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/promo/6429ef240f6f44b3a1a6465c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"promo",
+								"6429ef240f6f44b3a1a6465c"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/promo/6429ef240f6f44b3a1a6465c",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/promo/6429ef240f6f44b3a1a6465c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"promo",
+								"6429ef240f6f44b3a1a6465c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "http://localhost:3000/payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"6429cea79d313f4681ad24a8\",\r\n  \"order_id\": \"6429f1d1eb539daca8596e5b\",\r\n  \"amount\": 959.97,\r\n  \"payment_date\": \"2023-03-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/payment/6429f22aeb539daca8596e5f",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/payment/6429f22aeb539daca8596e5f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payment",
+								"6429f22aeb539daca8596e5f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/payment/6429f22aeb539daca8596e5f",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"6429cea79d313f4681ad24a8\",\r\n  \"order_id\": \"6429f1d1eb539daca8596e5b\",\r\n  \"amount\": 909.97,\r\n  \"payment_date\": \"2023-04-21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payment/6429f22aeb539daca8596e5f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payment",
+								"6429f22aeb539daca8596e5f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/payment/6429f22aeb539daca8596e5f",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjlhY2ZjZjhkY2VlNGRkMTQzOTM5NSIsImVtYWlsIjoiZmxvcmlhbi5sZWJvcmduZUB5bm92LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDZzY1RFUFZONjFGOHVlY0tMenJpUU9JMVM3MXAvRDF5WC5DTER3aUo2aW84Szh3SDIxRmcyIiwiX192IjowfSwiaWF0IjoxNjgwNDUzNjM3LCJleHAiOjE2ODA0NTcyMzd9.c4et8IpEQS8hKWjjNDpdpNd4zIg2jsV3PzIlsUNQrz8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/payment/6429f22aeb539daca8596e5f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payment",
+								"6429f22aeb539daca8596e5f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

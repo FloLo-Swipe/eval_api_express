@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "642f414fcd8ce2dfe0669703"
+  },
+  "id": 1,
+  "user_id": {
+    "$oid": "6429cea79d313f4681ad24a8"
+  },
+  "product_id": {
+    "$oid": "6423625eb87b3eab3a6c1e3a"
+  },
+  "content": "C'est très cher pour un PC Portable !",
+  "__v": 0
+}]
